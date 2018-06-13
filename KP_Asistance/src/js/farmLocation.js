@@ -5,27 +5,32 @@ var markerinfo = [
       {
         detail_address: '107동 1102호',
         prefix_address: '경기도 수원시 영통구 권광로260번길 36',
-        postnum: '64905-0403-1184'
+        postnum: '64905-0403-1184',
+        endYn:'N'
       },
       {
         detail_address: '111동 801호',
         prefix_address: '경기도 수원시 영통구 권광로260번길 36',
-        postnum: '64905-0403-0174'
+        postnum: '64905-0403-0174',
+        endYn:'N'
       },
       {
         detail_address: '124동 104호',
         prefix_address: '경기도 수원시 영통구 권광로260번길 36',
-        postnum: '64905-0403-1874'
+        postnum: '64905-0403-1874',
+        endYn:'N'
       },
       {
         detail_address: '128동 2104호',
         prefix_address: '경기도 수원시 영통구 권광로260번길 36',
-        postnum: '64905-0403-8524'
+        postnum: '64905-0403-8524',
+        endYn:'N'
       },
       {
         detail_address: '130동 1701호',
         prefix_address: '경기도 수원시 영통구 권광로260번길 36',
-        postnum: '64905-0403-9341'
+        postnum: '64905-0403-9341',
+        endYn:'N'
       }
     ]
   },
@@ -35,27 +40,32 @@ var markerinfo = [
       {
         detail_address: '101호 704호',
         prefix_address: '경기도 수원시 팔달구 권광로276번길 8',
-        postnum: '64905-0404-5316'
+        postnum: '64905-0404-5316',
+        endYn:'N'
       },
       {
         detail_address: '101호 1202호',
         prefix_address: '경기도 수원시 팔달구 권광로276번길 8',
-        postnum: '64905-0404-6216'
+        postnum: '64905-0404-6216',
+        endYn:'N'
       },
       {
         detail_address: '102호 201호',
         prefix_address: '경기도 수원시 팔달구 권광로276번길 8',
-        postnum: '64905-0404-7736'
+        postnum: '64905-0404-7736',
+        endYn:'N'
       },
       {
         detail_address: '102호 1702호',
         prefix_address: '경기도 수원시 팔달구 권광로276번길 8',
-        postnum: '64905-0404-0615'
+        postnum: '64905-0404-0615',
+        endYn:'N'
       },
       {
         detail_address: '103호 903호',
         prefix_address: '경기도 수원시 팔달구 권광로276번길 8',
-        postnum: '64905-0404-6071'
+        postnum: '64905-0404-6071',
+        endYn:'N'
       }
     ]
   },
@@ -65,27 +75,32 @@ var markerinfo = [
       {
         detail_address: '101호 1301호',
         prefix_address: '경기도 수원시 팔달구 권광로 246',
-        postnum: '64905-0405-6309'
+        postnum: '64905-0405-6309',
+        endYn:'N'
       },
       {
         detail_address: '102호 1801호',
         prefix_address: '경기도 수원시 팔달구 권광로 246',
-        postnum: '64905-0405-7415'
+        postnum: '64905-0405-7415',
+        endYn:'N'
       },
       {
         detail_address: '103호 703호',
         prefix_address: '경기도 수원시 팔달구 권광로 246',
-        postnum: '64905-0405-1035'
+        postnum: '64905-0405-1035',
+        endYn:'N'
       },
       {
         detail_address: '104호 402호',
         prefix_address: '경기도 수원시 팔달구 권광로 246',
-        postnum: '64905-0405-6031'
+        postnum: '64905-0405-6031',
+        endYn:'N'
       },
       {
         detail_address: '105호 801호',
         prefix_address: '경기도 수원시 팔달구 권광로 246',
-        postnum: '64905-0405-8152'
+        postnum: '64905-0405-8152',
+        endYn:'N'
       }
     ]
   }

@@ -9,8 +9,10 @@ function initMap() {
     center: locationss[0],
     zoom: 16
   })
+
+
   //내위치 나타내기
-  new google.maps.Marker({
+  var myMarker = new google.maps.Marker({
     position: new google.maps.LatLng(locationss[0].lat, locationss[0].lng),
     map,
     draggable: false,
@@ -21,6 +23,12 @@ function initMap() {
 
 
   var labels = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+  var iconEnd = {
+    url: 'https://cdn0.iconfinder.com/data/icons/small-n-flat/24/678134-sign-check-512.png',
+    scaledSize: new google.maps.Size(30, 30), // scaled size
+    origin: new google.maps.Point(0,0), // origin
+    anchor: new google.maps.Point(0, 0) // anchor
+  }
   var icon = {
     url: 'https://cdn0.iconfinder.com/data/icons/small-n-flat/24/678134-sign-check-512.png',
     scaledSize: new google.maps.Size(30, 30), // scaled size
@@ -28,6 +36,7 @@ function initMap() {
     anchor: new google.maps.Point(0, 0) // anchor
   }
 
+  // 마커들 등록
   for(var i = 0 ; i < locationss.length ; i++){
     var marker = new google.maps.Marker({
       position: locationss[i],
@@ -36,12 +45,12 @@ function initMap() {
     })
     var infowindow = new google.maps.InfoWindow()
 
-    var content = hardCodedStep(1);
+    var content = hardCodedStep(1, marker);
 
     google.maps.event.addListener(marker,'click', (function(marker,content,infowindow){
       return function() {
-        infowindow.setContent(content);
-        infowindow.open(map,marker);
+        infowindow.setContent(content)
+        infowindow.open(map,marker)
       }
     })(marker,content,infowindow))
   }
@@ -63,7 +72,7 @@ function initMap() {
     strokeColor: '#f86c6b',
     strokeOpacity: 1.0,
     strokeWeight: 5
-  });
+  })
 
   flightPath.setMap(map);
 
@@ -74,7 +83,12 @@ function initMap() {
     strokeColor: '#4dbd74',
     strokeOpacity: 1.0,
     strokeWeight: 5
-  });
+  })
 
   endLocation.setMap(map);
+}
+
+
+function deliverYes(marker, ) {
+  //마커 이미지를바꿔줘
 }
