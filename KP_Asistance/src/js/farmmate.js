@@ -33,7 +33,7 @@ function initMap() {
       infowindow.open(map, marker)
     })
 
-    var contentString = '123123'
+    var contentString =hardCodedStep(1);
 
     var infowindow = new google.maps.InfoWindow({
       content: contentString
