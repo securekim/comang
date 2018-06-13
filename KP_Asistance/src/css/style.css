@@ -11552,7 +11552,7 @@ canvas {
   flex: 1;
   overflow-x: hidden;
   overflow-y: auto;
-  width: 300px;
+  width: 200px;
 }
 
 .sidebar .nav {
