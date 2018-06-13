@@ -94,14 +94,6 @@ var contents;
   initSignature(dongNumber);
 
   return contents;
-
-
-  // const infowindow = new google.maps.InfoWindow({
-  //   content: contents,
-  //   maxWidth: 1000
-  // })
-
-  // infowindow.open(map, marker)
 }
 
 var signaturePad_1="";

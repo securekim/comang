@@ -36,7 +36,7 @@ function initMap() {
     })
     var infowindow = new google.maps.InfoWindow()
 
-    var content = '1111'
+    var content = hardCodedStep(1);
 
     google.maps.event.addListener(marker,'click', (function(marker,content,infowindow){
       return function() {
