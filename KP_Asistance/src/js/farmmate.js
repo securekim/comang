@@ -47,8 +47,6 @@ function initMap() {
   }
 
 
-
-
   //마커들 등록
   markers = locationss.map((location, i) => {
      var marker = new google.maps.Marker({
