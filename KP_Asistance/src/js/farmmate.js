@@ -2,7 +2,7 @@ let map
 let myLat=37.27058
 let myLng=127.036017
 let markers
-
+let index = 0
 function initMap() {
   refleshSideBar()
   map = new google.maps.Map(document.getElementById('map'), {
@@ -11,8 +11,8 @@ function initMap() {
   })
 
   //내위치 나타내기
-  var myMarker = new SlidingMarker({
-    position: new google.maps.LatLng(locationss[0].lat, locationss[0].lng),
+  var myMarker = new google.maps.Marker({
+    position: new google.maps.LatLng(locationss[13].lat, locationss[13].lng),
     map,
     draggable: false,
     icon: 'http://maps.google.com/mapfiles/ms/micons/man.png'
@@ -31,7 +31,7 @@ function walkingSmoothly(latLng){
     anchor: new google.maps.Point(0, 0) // anchor
   }
   var icon = {
-    url: 'https://cdn0.iconfinder.com/data/icons/small-n-flat/24/678134-sign-check-512.png',
+    url: 'https://cdn3.iconfinder.com/data/icons/iconic-1/32/check_alt-512.png',
     scaledSize: new google.maps.Size(30, 30), // scaled size
     origin: new google.maps.Point(0,0), // origin
     anchor: new google.maps.Point(0, 0) // anchor
@@ -39,11 +39,21 @@ function walkingSmoothly(latLng){
 
   // 마커들 등록
   for(var i = 0 ; i < locationss.length ; i++){
-    var marker = new google.maps.Marker({
-      position: locationss[i],
-      icon: icon,
-      map:map
-    })
+    var marker = null
+    if(i >= 13+index){
+      marker = new google.maps.Marker({
+        position: locationss[i],
+        icon: icon,
+        map:map
+      })
+    }else {
+      marker = new google.maps.Marker({
+        position: locationss[i],
+        icon: iconEnd,
+        map:map
+      })
+    }
+
     var infowindow = new google.maps.InfoWindow()
 
     var content = hardCodedStep(1, marker);
@@ -54,6 +64,9 @@ function walkingSmoothly(latLng){
         infowindow.open(map,marker)
       }
     })(marker,content,infowindow))
+
+
+
   }
 
 
@@ -90,6 +103,8 @@ function walkingSmoothly(latLng){
 }
 
 
-function deliverYes(marker, ) {
+function deliverYes() {
   //마커 이미지를바꿔줘
+  index+=1
+  initMap()
 }
