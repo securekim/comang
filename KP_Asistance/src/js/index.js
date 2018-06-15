@@ -6,6 +6,7 @@ $(function(){
   });
 });
 
+add();
 
 function add(){
   myrow = document.getElementById('row');
