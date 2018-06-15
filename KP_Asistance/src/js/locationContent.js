@@ -50,7 +50,7 @@ var contents;
 
   contents =
   `${'<div id="content" style="width:350px;"><div id="siteNotice"></div>' +
-  '<h1 id="firstHeading" class="firstHeading">'}매탄힐스테이트아파트</h1>` +
+  '<h1 id="firstHeading" class="firstHeading">'}래미안 힐스테이트 <br>1단지 아파트</h1>` +
   '<div id="bodyContent" style="width:100%;">' +
   `<p><b>주소</b> 경기도 수원시 영통구 매탄1동 176 </br></br>` +
   `<p><b>등기번호</b> 0123912 </br></br>` +
