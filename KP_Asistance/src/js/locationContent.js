@@ -50,19 +50,19 @@ var contents;
 
   contents =
   `${'<div id="content" style="width:350px;"><div id="siteNotice"></div>' +
-  '<h1 id="firstHeading" class="firstHeading">'}래미안 힐스테이트 <br>1단지 아파트</h1>` +
-  '<div id="bodyContent" style="width:100%;">' +
-  `<p><b>주소</b> 경기도 수원시 영통구 매탄1동 176 </br></br>` +
-  `<p><b>등기번호</b> 0123912 </br></br>` +
-  `<p><b>요청사항</b> 부재시 경비실에 맡겨주세요. </br></br>` +
-  `<p><b>고객님 사인 :</b></br></br>`;
+  '<h2 id="firstHeading" class="firstHeading">'}래미안 힐스테이트 <br>1단지 아파트</h1>` +
+  '<hr><div id="bodyContent" style="width:100%;">' +
+  `<p class="h5"><strong>등기번호</strong> 5123912 </br></br>` +
+  `<p class="h5"><strong>요청사항</strong> 부재시 경비실에 맡겨주세요. </br></br>` +
+  `<hr style="margin-top:-10px"><p class="h6"><strong>주소</strong> 경기도 수원시 영통구 매탄1동 176 </br></br>` +
+  `<p><strong>고객님 사인 :</strong></br></br>`;
   
   }else if (dongNumber ==2){
     contents =
     `${'<div id="content" style="width:350px;"><div id="siteNotice"></div>' +
     '<h1 id="firstHeading" class="firstHeading">'}인계삼성아파트</h1>` +
     '<div id="bodyContent" style="width:100%;">' +
-    `<p><b>주소</b> 경기도 수원시 팔달구 인계동 371-1 </br></br>` +
+    `<p><strong>주소</strong> 경기도 수원시 팔달구 인계동 371-1 </br></br>` +
     `<p><b>등기번호</b> 1102304 </br></br>` +
     `<p><b>요청사항</b> 부재시 소화전에 넣어주세요. </br></br>` +
     `<p><b>고객님 사인 :</b></br></br>`;
@@ -85,8 +85,8 @@ var contents;
   '<canvas id="signature-pad_'+dongNumber+'" class="signature-pad" style="position:relative; top:-150px" onclick="initSignature('+dongNumber+')"></canvas>'+
   '</div>'+
   '<div>'+
-  '<button id="save_'+dongNumber+'" style="width:100%" onclick="saveIt('+dongNumber+')" class="btn btn-primary btn-block">Save</button>' +
-  '<button id="clear_'+dongNumber+'" style="width:100%" class="btn btn-danger btn-block">Clear</button>' +
+  '<button id="save_'+dongNumber+'" style="width:100%" onclick="saveIt('+dongNumber+')" class="btn btn-success btn-block">배달 완료</button>' +
+  '<button id="clear_'+dongNumber+'" style="width:100%" class="btn btn-danger btn-block">닫기</button>' +
   '</div>' +
   '<div class="container-fluid">' +
   '<div class="animated fadeIn">' +
