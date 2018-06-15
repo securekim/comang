@@ -19,22 +19,22 @@ function initMap() {
   })
 
 function walkingSmoothly(latLng){
-  myMarker.setPosition(latLng); 
+  myMarker.setPosition(latLng);
 }
 
 
-  var labels = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+  var labels = '2시간 15분 전';
   var iconEnd = {
     url: 'https://cdn0.iconfinder.com/data/icons/small-n-flat/24/678134-sign-check-512.png',
     scaledSize: new google.maps.Size(30, 30), // scaled size
-    origin: new google.maps.Point(0,0), // origin
-    anchor: new google.maps.Point(0, 0) // anchor
+    labelOrigin:  new google.maps.Point(10,0),
   }
   var icon = {
     url: 'https://cdn3.iconfinder.com/data/icons/iconic-1/32/check_alt-512.png',
     scaledSize: new google.maps.Size(30, 30), // scaled size
-    origin: new google.maps.Point(0,0), // origin
-    anchor: new google.maps.Point(0, 0) // anchor
+    origin: new google.maps.Point(0, 0),
+    anchor: new google.maps.Point(32,65),
+    labelOrigin:  new google.maps.Point(15,-5),
   }
 
   // 마커들 등록
@@ -44,13 +44,25 @@ function walkingSmoothly(latLng){
       marker = new google.maps.Marker({
         position: locationss[i],
         icon: icon,
-        map:map
+        map:map,
+        label: {
+          text: labels,
+          color: 'black',
+          fontSize: '5px',
+          fontWeight: "bold"
+        }
       })
     }else {
       marker = new google.maps.Marker({
         position: locationss[i],
         icon: iconEnd,
-        map:map
+        map:map,
+        label: {
+          text: labels,
+          color: 'black',
+          fontSize: '5px',
+          fontWeight: "bold"
+        }
       })
     }
 
