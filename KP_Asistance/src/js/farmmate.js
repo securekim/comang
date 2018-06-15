@@ -2,7 +2,7 @@ let map
 let myLat=37.27058
 let myLng=127.036017
 let markers
-
+let index = 0
 function initMap() {
   refleshSideBar()
   map = new google.maps.Map(document.getElementById('map'), {
@@ -13,7 +13,7 @@ function initMap() {
 
   //내위치 나타내기
   var myMarker = new google.maps.Marker({
-    position: new google.maps.LatLng(locationss[10].lat, locationss[10].lng),
+    position: new google.maps.LatLng(locationss[13].lat, locationss[13].lng),
     map,
     draggable: false,
     icon: 'http://maps.google.com/mapfiles/ms/micons/man.png'
@@ -39,7 +39,7 @@ function initMap() {
   // 마커들 등록
   for(var i = 0 ; i < locationss.length ; i++){
     var marker = null
-    if(i >= 9){
+    if(i >= 13+index){
       marker = new google.maps.Marker({
         position: locationss[i],
         icon: icon,
@@ -102,8 +102,8 @@ function initMap() {
 }
 
 
-function deliverYes(marker) {
+function deliverYes() {
   //마커 이미지를바꿔줘
-
-  marker
+  index+=1
+  initMap()
 }
