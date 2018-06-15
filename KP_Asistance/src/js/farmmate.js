@@ -13,7 +13,7 @@ function initMap() {
 
   //내위치 나타내기
   var myMarker = new google.maps.Marker({
-    position: new google.maps.LatLng(locationss[0].lat, locationss[0].lng),
+    position: new google.maps.LatLng(locationss[10].lat, locationss[10].lng),
     map,
     draggable: false,
     icon: 'http://maps.google.com/mapfiles/ms/micons/man.png'
@@ -30,7 +30,7 @@ function initMap() {
     anchor: new google.maps.Point(0, 0) // anchor
   }
   var icon = {
-    url: 'https://cdn0.iconfinder.com/data/icons/small-n-flat/24/678134-sign-check-512.png',
+    url: 'https://cdn3.iconfinder.com/data/icons/iconic-1/32/check_alt-512.png',
     scaledSize: new google.maps.Size(30, 30), // scaled size
     origin: new google.maps.Point(0,0), // origin
     anchor: new google.maps.Point(0, 0) // anchor
@@ -38,11 +38,21 @@ function initMap() {
 
   // 마커들 등록
   for(var i = 0 ; i < locationss.length ; i++){
-    var marker = new google.maps.Marker({
-      position: locationss[i],
-      icon: icon,
-      map:map
-    })
+    var marker = null
+    if(i >= 9){
+      marker = new google.maps.Marker({
+        position: locationss[i],
+        icon: icon,
+        map:map
+      })
+    }else {
+      marker = new google.maps.Marker({
+        position: locationss[i],
+        icon: iconEnd,
+        map:map
+      })
+    }
+
     var infowindow = new google.maps.InfoWindow()
 
     var content = hardCodedStep(1, marker);
@@ -53,6 +63,9 @@ function initMap() {
         infowindow.open(map,marker)
       }
     })(marker,content,infowindow))
+
+
+
   }
 
 
@@ -89,6 +102,8 @@ function initMap() {
 }
 
 
-function deliverYes(marker, ) {
+function deliverYes(marker) {
   //마커 이미지를바꿔줘
+
+  marker
 }
