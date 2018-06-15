@@ -6,8 +6,8 @@ let index = 0
 function initMap() {
   refleshSideBar()
   map = new google.maps.Map(document.getElementById('map'), {
-    center: locationss[0],
-    zoom: 16
+    center: locationss[9],
+    zoom: 17
   })
 
   //내위치 나타내기
@@ -46,8 +46,8 @@ function walkingSmoothly(latLng){
         map:map,
         label: {
           text: labelText[i-13],
-          color: '#f86c6b',
-          fontSize: '5px',
+          color: 'black',
+          fontSize: '15px',
           fontWeight: "bold"
         }
       })
