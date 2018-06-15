@@ -45,7 +45,7 @@ function walkingSmoothly(latLng){
         icon: icon,
         map:map,
         label: {
-          text: labels,
+          text: labelText[i-13],
           color: '#f86c6b',
           fontSize: '5px',
           fontWeight: "bold"
@@ -55,13 +55,7 @@ function walkingSmoothly(latLng){
       marker = new google.maps.Marker({
         position: locationss[i],
         icon: iconEnd,
-        map:map,
-        label: {
-          text: labels,
-          color: '#4dbd74',
-          fontSize: '5px',
-          fontWeight: "bold"
-        }
+        map:map
       })
     }
 
