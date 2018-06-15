@@ -12,7 +12,7 @@ function initMap() {
 
   //내위치 나타내기
   var myMarker = new google.maps.Marker({
-    position: new google.maps.LatLng(locationss[13].lat, locationss[13].lng),
+    position: new google.maps.LatLng(locationss[12].lat, locationss[12].lng),
     map,
     draggable: false,
     icon: 'http://maps.google.com/mapfiles/ms/micons/man.png'
@@ -33,7 +33,6 @@ function walkingSmoothly(latLng){
     url: 'https://cdn3.iconfinder.com/data/icons/iconic-1/32/check_alt-512.png',
     scaledSize: new google.maps.Size(30, 30), // scaled size
     origin: new google.maps.Point(0, 0),
-    anchor: new google.maps.Point(32,65),
     labelOrigin:  new google.maps.Point(15,-5),
   }
 
@@ -47,7 +46,7 @@ function walkingSmoothly(latLng){
         map:map,
         label: {
           text: labels,
-          color: 'black',
+          color: '#f86c6b',
           fontSize: '5px',
           fontWeight: "bold"
         }
@@ -59,7 +58,7 @@ function walkingSmoothly(latLng){
         map:map,
         label: {
           text: labels,
-          color: 'black',
+          color: '#4dbd74',
           fontSize: '5px',
           fontWeight: "bold"
         }
@@ -83,7 +82,7 @@ function walkingSmoothly(latLng){
   }
 
 
-  
+
 
   //마커들 등록
   markers = locationss.map((location, i) => {
