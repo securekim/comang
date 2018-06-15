@@ -62,6 +62,7 @@ function walkingSmoothly(latLng){
       return function() {
         infowindow.setContent(content)
         infowindow.open(map,marker)
+        document.getElementById('content').parentElement.style="overflow:hidden;"
       }
     })(marker,content,infowindow))
 
@@ -69,6 +70,8 @@ function walkingSmoothly(latLng){
 
   }
 
+
+  
 
   //마커들 등록
   markers = locationss.map((location, i) => {
