@@ -49,7 +49,7 @@ var contents;
   if(dongNumber == 1){
 
   contents =
-  `${'<div id="content" style="width:100%;"><div id="siteNotice"></div>' +
+  `${'<div id="content" style="width:350px;"><div id="siteNotice"></div>' +
   '<h1 id="firstHeading" class="firstHeading">'}매탄힐스테이트아파트</h1>` +
   '<div id="bodyContent" style="width:100%;">' +
   `<p><b>주소</b> 경기도 수원시 영통구 매탄1동 176 </br></br>` +
@@ -58,7 +58,8 @@ var contents;
   `<p><b>고객님 사인 :</b></br></br>`;
   
   }else if (dongNumber ==2){
-    `${'<div id="content" style="width:100%;"><div id="siteNotice"></div>' +
+    contents =
+    `${'<div id="content" style="width:350px;"><div id="siteNotice"></div>' +
     '<h1 id="firstHeading" class="firstHeading">'}인계삼성아파트</h1>` +
     '<div id="bodyContent" style="width:100%;">' +
     `<p><b>주소</b> 경기도 수원시 팔달구 인계동 371-1 </br></br>` +
@@ -67,7 +68,7 @@ var contents;
     `<p><b>고객님 사인 :</b></br></br>`;
   
   }else if (dongNumber ==3){
-    `${'<div id="content" style="width:100%;"><div id="siteNotice"></div>' +
+    `${'<div id="content" style="width:350px;"><div id="siteNotice"></div>' +
     '<h1 id="firstHeading" class="firstHeading">'}래미안노블클래스 1단지</h1>` +
     '<div id="bodyContent" style="width:100%;">' +
     `<p><b>주소</b> 경기도 수원시 팔달구 인계동 권광로 246 </br></br>` +
@@ -76,17 +77,20 @@ var contents;
     `<p><b>고객님 사인 :</b></br></br>`;
   
   }
-  // '<div class="container-fluid">' +
-  // '<div class="row"">' +
-  contents+='<div class="animated fadeIn">' +
-  '<div class="wrapper">'+
-  '<img style="opacity:0.3" src="img/koreaPost.png" width=400 height=200 />'+
-  '<canvas id="signature-pad_'+dongNumber+'" class="signature-pad" width=400 height=200 onclick="initSignature('+dongNumber+')"></canvas>'+
+  // 
+  // 
+  contents+= 
+  '<div class="signature-pad--body" style="width:300px; height:160px; margin-left:25px;">'+
+  '<img style="opacity:0.3;width:300px; height:150px" src="img/koreaPost.png" />'+
+  '<canvas id="signature-pad_'+dongNumber+'" class="signature-pad" style="position:relative; top:-150px" onclick="initSignature('+dongNumber+')"></canvas>'+
   '</div>'+
   '<div>'+
-  '<button id="save_'+dongNumber+'" onclick="saveIt('+dongNumber+')" class="btn btn-primary btn-block">Save</button>' +
-  '<button id="clear_'+dongNumber+'" class="btn btn-danger btn-block">Clear</button>' +
+  '<button id="save_'+dongNumber+'" style="width:100%" onclick="saveIt('+dongNumber+')" class="btn btn-primary btn-block">Save</button>' +
+  '<button id="clear_'+dongNumber+'" style="width:100%" class="btn btn-danger btn-block">Clear</button>' +
   '</div>' +
+  '<div class="container-fluid">' +
+  '<div class="animated fadeIn">' +
+  '<div class="row"">' +
   '</div>' +
   '</div>' +
   '</div>'
