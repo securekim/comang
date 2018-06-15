@@ -139,6 +139,7 @@ function initSignature(number){
 
 function saveIt(number){
   console.log(number);
+  deliverYes();
 }
 
 
