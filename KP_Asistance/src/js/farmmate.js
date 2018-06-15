@@ -10,16 +10,17 @@ function initMap() {
     zoom: 16
   })
 
-
   //내위치 나타내기
-  var myMarker = new google.maps.Marker({
+  var myMarker = new SlidingMarker({
     position: new google.maps.LatLng(locationss[0].lat, locationss[0].lng),
     map,
     draggable: false,
     icon: 'http://maps.google.com/mapfiles/ms/micons/man.png'
   })
 
-
+function walkingSmoothly(latLng){
+  myMarker.setPosition(latLng); 
+}
 
 
   var labels = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
