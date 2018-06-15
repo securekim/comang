@@ -123,9 +123,7 @@ function initSignature(number){
     eval("cancelButton_"+number+" = document.getElementById('clear_"+number+"')");
     eval("saveButton_"+number+".addEventListener('click', function (event) {"+
       "var data = signaturePad_"+number+".toDataURL('image/png');"+
-
-      "localStorage.setItem('signature_'+"+number+", 'Tom')"+
-
+      "localStorage.setItem('signature_'+"+number+", data)"+
       "window.open(data);"+
     "})");
     eval("cancelButton_"+number+".addEventListener('click', function (event) {"+
@@ -139,6 +137,8 @@ function initSignature(number){
 
 function saveIt(number){
   console.log(number);
+  var data = signaturePad_1.toDataURL('image/png');
+  localStorage.setItem('signature_'+number, data);
   deliverYes();
 }
 
