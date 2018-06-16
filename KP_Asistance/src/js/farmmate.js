@@ -10,13 +10,6 @@ function initMap() {
     zoom: 17
   })
 
-  //내위치 나타내기
-  var myMarker = new google.maps.Marker({
-    position: new google.maps.LatLng(locationss[12].lat, locationss[12].lng),
-    map,
-    draggable: false,
-    icon: 'http://maps.google.com/mapfiles/ms/micons/man.png'
-  })
 
 function walkingSmoothly(latLng){
   myMarker.setPosition(latLng);
@@ -24,6 +17,8 @@ function walkingSmoothly(latLng){
 
 
   var labels = '2시간 15분 전';
+
+
   var iconEnd = {
     url: 'https://cdn0.iconfinder.com/data/icons/small-n-flat/24/678134-sign-check-512.png',
     scaledSize: new google.maps.Size(30, 30), // scaled size
@@ -76,7 +71,17 @@ function walkingSmoothly(latLng){
   }
 
 
-
+  var iconMy = {
+    url: 'img/brand/truck.png',
+    scaledSize: new google.maps.Size(80, 50), // scaled size
+  }
+  //내위치 나타내기
+  var myMarker = new google.maps.Marker({
+    position: new google.maps.LatLng(locationss[12].lat, locationss[12].lng),
+    map,
+    draggable: false,
+    icon: iconMy
+  })
 
   //마커들 등록
   markers = locationss.map((location, i) => {
