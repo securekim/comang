@@ -30,22 +30,41 @@ function walkingSmoothly(latLng){
     origin: new google.maps.Point(0, 0),
     labelOrigin:  new google.maps.Point(15,-5),
   }
-
+  var iconHome = {
+    url: 'img/brand/home.png',
+    scaledSize: new google.maps.Size(60, 60), // scaled size
+    labelOrigin:  new google.maps.Point(30,-5)
+  }
   // 마커들 등록
   for(var i = 0 ; i < locationss.length ; i++){
     var marker = null
-    if(i >= 13+index){
-      marker = new google.maps.Marker({
-        position: locationss[i],
-        icon: icon,
-        map:map,
-        label: {
-          text: labelText[i-13-index],
-          color: 'black',
-          fontSize: '15px',
-          fontWeight: "bold"
-        }
-      })
+    if(i >= 14+index){
+      if(i == 18){
+        marker = new google.maps.Marker({
+          position: locationss[i],
+          icon: iconHome,
+          map:map,
+          label: {
+            text: labelText[i-13-index],
+            color: 'black',
+            fontSize: '15px',
+            fontWeight: "bold"
+          }
+        })
+      }else{
+        marker = new google.maps.Marker({
+          position: locationss[i],
+          icon: icon,
+          map:map,
+          label: {
+            text: labelText[i-13-index],
+            color: 'black',
+            fontSize: '15px',
+            fontWeight: "bold"
+          }
+        })
+      }
+
     }else {
       marker = new google.maps.Marker({
         position: locationss[i],
