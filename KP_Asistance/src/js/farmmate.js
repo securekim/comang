@@ -6,8 +6,8 @@ let index = 0
 function initMap() {
   refleshSideBar()
   map = new google.maps.Map(document.getElementById('map'), {
-    center: locationss[9],
-    zoom: 17
+    center: locationss[12],
+    zoom: 18
   })
 
 
