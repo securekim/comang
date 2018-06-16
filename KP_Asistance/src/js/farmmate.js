@@ -45,7 +45,7 @@ function walkingSmoothly(latLng){
         icon: icon,
         map:map,
         label: {
-          text: labelText2[i-13-index],
+          text: labelText[i-13-index],
           color: 'black',
           fontSize: '15px',
           fontWeight: "bold"
