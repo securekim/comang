@@ -16,7 +16,7 @@ function add(){
        '<article>'+
          '<a href="#" class="more">more</a>'+
          '<div class="img-wrapper" style="margin-left: 20px; margin-top: 35px;"><img src="'+localStorage.getItem("signature_1")+'" alt="" /></div>'+
-         '<h1>래미안 힐스테이트 1단지</h1>'+
+         '<h1>래미안 힐스테이트 1단지 103동 501호</h1>'+
          '<p><b>주소</b> 경기도 수원시 영통구 매탄1동 176'+
        '</article>'+
    '</div>'
